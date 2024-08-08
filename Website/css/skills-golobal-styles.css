@@ -1,0 +1,228 @@
+/* Start Global p, h1, h2, h3 */
+
+/* take a look if you can do it global in all website */
+
+.lessons .page-title,
+h2,
+h3 {
+  color: var(--light-blue-color);
+  margin-top: 50px;
+}
+
+.lessons .page-title {
+  font-size: 35px;
+  text-align: center;
+}
+
+p {
+  padding: 25px 0;
+}
+
+.lessons li {
+  line-height: 2;
+}
+
+.lessons h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.lessons h3 {
+  font-size: 20px;
+}
+/* End Global p, h1, h2, h3 */
+
+/* Start Lessons */
+.lessons {
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.lessons a {
+  text-decoration: none;
+}
+.lessons .lesson {
+  padding: 10px;
+  height: fit-content;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.5s;
+}
+.lessons .lesson::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: var(--dark-blue-color);
+  border-radius: 10px;
+  left: 1px;
+  top: 1px;
+  z-index: -1;
+  transition: 0.5s;
+}
+.lessons .lesson::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: var(--dark-red-color);
+  border-radius: 10px;
+  right: 1px;
+  top: calc(100% - 100px);
+  z-index: -1;
+  transition: 0.5s;
+}
+.lessons .lesson:hover::before {
+  transform: translate(-10px, -10px);
+}
+.lessons .lesson:hover::after {
+  transform: translate(10px, 10px);
+}
+.lessons a .lesson .text h3 {
+  margin: 10px 0 0;
+}
+.lessons a .lesson .text p {
+  color: #333;
+}
+/* End Lessons */
+
+/* Start Reading */
+
+.reading-cont .text  h2 {
+  text-align: center;
+}
+.reading-cont .text  p {
+  text-align: center;
+  font-size: 18px;
+}
+/* End Reading */
+
+/* Start Massege */
+.writing-cont  {
+  margin: auto;
+}
+/* Small */
+@media (max-width: 768px) {
+  .writing-cont  {
+    width: 100%;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .writing-cont  {
+    width: 70%;
+  }
+}
+.writing-cont .massege-app .massege-header {
+  padding: 15px;
+  background-color: #065f55;
+  color: #fff;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+.writing-cont .massege-app .massege-header h4 {
+  font-size: 21px;
+}
+.writing-cont .massege-app .massege-header span.status {
+  font-size: 14px;
+  color: #fbfbfb;
+}
+.writing-cont .massege-app .massege-cont {
+  padding: 15px 20px;
+  border: 2px solid #c9c9c9;
+}
+.writing-cont .massege-app .massege-cont div {
+  padding: 10px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  font-size: 18px;
+  max-width: 300px;
+  border-radius: 8px;
+  width: fit-content;
+}
+.writing-cont .massege-app .massege-cont div p {
+  padding: 5px 5px 0;
+}
+.writing-cont .massege-app .massege-cont div span {
+  display: flex;
+  justify-content: flex-end;
+  color: #aaa;
+  font-size: 13px;
+  margin-right: 5px;
+}
+.writing-cont .massege-app .massege-cont div.left {
+  background-color: #fffaf6;
+  margin-bottom: 20px;
+}
+.writing-cont .massege-app .massege-cont div.right {
+  margin-left: auto;
+  background-color: #e1f7ca;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tips {
+  margin: 40px 0;
+}
+
+.tips h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.tips ol {
+  margin: 0 0 0 35px;
+}
+/* End Massege */
+
+/* Start Speaking */
+.speaking-cont .video {
+  margin: var(--section-margin) 0;
+  display: flex;
+  justify-content: center;
+}
+/* Small */
+@media (max-width: 768px) {
+  .speaking-cont .video video  {
+    width: 100%;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .speaking-cont .video video  {
+    width: 70%;
+  }
+}
+/* End Speaking */
+
+/* Start  */
+/* >>> Transcript <<< */
+.container .transcript .text {
+  margin-top: var(--section-margin);
+  margin-bottom: var(--section-margin);
+}
+
+.container .transcript .text h2 {
+  color: #fff;
+  background-color: var(--light-blue-color);
+  padding: 10px;
+  font-size: 30px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.container .transcript .text p {
+  display: none;
+  background-color: #f0f0f0;
+  padding: 10px;
+  line-height: 1.5;
+}
+.container .transcript .text p:hover {
+  display: block;
+}
+
+.container .transcript .text h2:hover + p {
+  display: block;
+  background-color: #f0f0f0;
+}
+/* End  */

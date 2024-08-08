@@ -1,0 +1,115 @@
+.test-cont {
+  margin: 0;
+  padding: 0;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.test-cont .quiz-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 8px;
+}
+@media (max-width: 776px) {
+  .quiz-container {
+    text-align: center;
+  }
+}
+.test-cont h1 {
+  text-align: center;
+  font-family: "Lobster", cursive;
+  letter-spacing: 2px;
+  color: var(--light-blue-color);
+}
+.test-cont #question {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.test-cont .question {
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0 20px;
+}
+@media (max-width: 776px) {
+  .test-cont .question {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.test-cont .question p {
+  color: #333;
+  font-weight: 600;
+}
+.test-cont #answers {
+  margin-bottom: 20px;
+}
+.test-cont .buttons-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.test-cont .buttons-cont .answer-btn {
+  margin: 0 15px;
+  background-color: var(--light-blue-color);
+  color: #fff;
+  transition: 0.3s;
+}
+.test-cont .answer-btn:hover {
+  background-color: var(--dark-blue-color);
+
+}
+.test-cont #result {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 600;
+}
+.test-cont .selected {
+  background-color: var(--light-yellow-color) !important;
+  color: #fff;
+}
+.test-cont .correct {
+  background-color: #4CAF50 !important;
+  color: #fff;
+}
+.test-cont .incorrect {
+  background-color: var(--light-red-color) !important;
+  color: #fff;
+}
+.test-cont #restartBtn,
+.test-cont #finishBtn {
+  color: white;
+  transition: 0.3s;
+  margin: 0 5px;
+}
+.test-cont #finishBtn {
+  background-color: var(--light-red-color);
+}
+.test-cont #finishBtn:hover {
+  background-color: var(--dark-red-color);
+}
+.test-cont #restartBtn {
+  background-color: var(--light-blue-color);
+}
+.test-cont #restartBtn:hover {
+  background-color: var(--dark-blue-color);
+}
+@media (max-width: 776px) {
+  .test-cont .buttons-cont {
+    margin-top: 20px;
+  }
+}
+.test-cont .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}

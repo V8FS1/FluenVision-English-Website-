@@ -1,0 +1,175 @@
+///// HTML CODE \\\\\
+<div class="quiz-container">
+  <h1>True/False Quiz</h1>
+  <div id="questions"></div>
+  <div id="result" style="display: none"></div>
+  <button id="finishBtn">Finish</button>
+</div>
+
+///// CSS CODE \\\\\
+.test-cont {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.quiz-container {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#question {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#answers {
+  margin-bottom: 20px;
+}
+
+.answer-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.answer-btn:hover {
+  background-color: #45a049;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.selected {
+  background-color: #2196F3;
+  color: #fff;
+}
+
+.correct {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.incorrect {
+  background-color: #f44336;
+  color: #fff;
+}
+
+///// JS CODE \\\\\
+const questions = [
+  { question: "JavaScript is a programming language.", answer: true },
+  { question: "HTML stands for Hyper Text Markup Language.", answer: true },
+  { question: "CSS is used for styling web pages.", answer: true },
+  { question: "Python is a strongly typed language.", answer: false },
+  {
+    question: "React.js is a JavaScript library for building user interfaces.",
+    answer: true,
+  },
+  { question: "The DOM stands for Document Object Model.", answer: true },
+  { question: "HTTP stands for Hypertext Transfer Protocol.", answer: true },
+  { question: "Java is the same as JavaScript.", answer: false },
+  { question: "JSON stands for JavaScript Object Notation.", answer: true },
+  { question: "MySQL is a NoSQL database.", answer: false },
+];
+
+const quizContainer = document.querySelector(".quiz-container");
+const questionsDiv = document.getElementById("questions");
+const finishBtn = document.getElementById("finishBtn");
+const restartBtn = document.getElementById("restartBtn");
+const resultContainer = document.getElementById("result");
+
+let correctAnswers = 0;
+let quizFinished = false;
+
+function displayQuestions() {
+  let output = "";
+  questions.forEach((q, index) => {
+    output += `
+      <div class="question" id="question${index}">
+        <p>${q.question}</p>
+        <button class="answer-btn" data-answer="true">True</button>
+        <button class="answer-btn" data-answer="false">False</button>
+      </div>
+    `;
+  });
+  questionsDiv.innerHTML = output;
+}
+
+function displayResults() {
+  if (quizFinished) return;
+
+  const selectedButtons = document.querySelectorAll(".selected");
+  selectedButtons.forEach((button) => {
+    const answer = button.dataset.answer === "true";
+    const questionDiv = button.parentElement;
+    if (
+      answer ===
+      questions[Number(questionDiv.id.replace("question", ""))].answer
+    ) {
+      button.classList.add("correct");
+      correctAnswers++;
+    } else {
+      button.classList.add("incorrect");
+    }
+  });
+
+  const percentage = ((correctAnswers / questions.length) * 100).toFixed(2);
+  resultContainer.innerHTML = `Correct Answers: ${correctAnswers} / ${questions.length}<br>Percentage: ${percentage}%`;
+  resultContainer.style.display = "block";
+  quizFinished = true;
+
+  // Disable answer buttons after finish
+  const answerButtons = document.querySelectorAll(".answer-btn");
+  answerButtons.forEach((button) => {
+    button.disabled = true;
+  });
+
+  restartBtn.style.display = "block";
+}
+
+function restartQuiz() {
+  const answerButtons = document.querySelectorAll(".answer-btn");
+  answerButtons.forEach((button) => {
+    button.disabled = false;
+    button.classList.remove("correct", "incorrect", "selected");
+  });
+
+  correctAnswers = 0;
+  quizFinished = false;
+
+  resultContainer.style.display = "none";
+  restartBtn.style.display = "none";
+}
+
+finishBtn.addEventListener("click", displayResults);
+
+restartBtn.addEventListener("click", restartQuiz);
+
+questionsDiv.addEventListener("click", (event) => {
+  if (event.target.matches(".answer-btn") && !quizFinished) {
+    const selected = event.target;
+    selected.parentElement.querySelectorAll(".answer-btn").forEach((btn) => {
+      btn.classList.remove("selected");
+    });
+    selected.classList.add("selected");
+  }
+});
+
+window.addEventListener("load", displayQuestions);

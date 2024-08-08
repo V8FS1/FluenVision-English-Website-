@@ -1,0 +1,1111 @@
+/* Start Variabules */
+
+:root {
+
+  --section-padding: 60px;
+
+  --section-background: #f6f6f6;
+
+  --section-margin: 60px;
+
+}
+
+
+
+/* Web Main Colors */
+
+
+
+:root {
+
+  --dark-purple-color: #5f0f40;
+
+  --light-purple-color: #922668;
+
+  --dark-red-color: #9a031e;
+
+  --light-red-color: #c8082d;
+
+  --dark-yellow-color: #fb8b24;
+
+  --light-yellow-color: #ffad63;
+
+  --dark-orange-color: #e36414;
+
+  --light-orange-color: #f59456;
+
+  --dark-blue-color: #0f4c5c;
+
+  --light-blue-color: #0f7792;
+
+}
+
+
+
+.grid-2 {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+}
+
+/* End Variabules */
+
+
+
+/* Start Global Rules */
+
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  -webkit-box-sizing: border-box;
+
+  -moz-box-sizing: border-box;
+
+  box-sizing: border-box;
+
+}
+
+
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+
+
+body {
+
+  font-family: "Work Sans", sans-serif;
+
+}
+
+
+
+.container {
+
+  padding-left: 15px;
+
+  padding-right: 15px;
+
+  margin: 0 auto;
+
+}
+
+
+
+::selection {
+
+  background-color: var(--light-purple-color);
+
+  color: #fff;
+
+}
+
+
+
+/* Start secroller Edit */
+
+::-webkit-scrollbar {
+
+  width: 12px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb {
+
+  background-color: var(--light-purple-color);
+
+}
+
+/* End secroller Edit */
+
+
+
+/* Small */
+
+
+
+@media (min-width: 768px) {
+
+  .container {
+
+    width: 750px;
+
+  }
+
+}
+
+
+
+/* Medium */
+
+
+
+@media (min-width: 992px) {
+
+  .container {
+
+    width: 970px;
+
+  }
+
+}
+
+
+
+/* Large */
+
+
+
+@media (min-width: 1200px) {
+
+  .container {
+
+    width: 1170px;
+
+  }
+
+}
+
+/* End Global Rules */
+
+
+
+/* Start Components */
+
+.special-heading {
+
+  color: rgba(170, 169, 169, 0.212);
+
+  font-size: 100px;
+
+  text-align: center;
+
+  letter-spacing: -4px;
+
+  font-weight: 800;
+
+}
+
+
+
+.special-heading+p {
+
+  margin: -30px 0 0;
+
+  font-size: 20px;
+
+  text-align: center;
+
+  color: #797979;
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .special-heading {
+
+    font-size: 70px;
+
+  }
+
+  .special-heading+p {
+
+    margin: -20px 0 0;
+
+  }
+
+}
+
+/* End Components */
+
+
+
+/* Start Landing Section */
+
+.landing {
+
+  background-image: url("../images/landing.jpg");
+
+  width: 100%;
+
+  height: calc(100vh - 76px);
+
+  background-size: cover;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+
+
+.landing .intro-text {
+
+  width: 570px;
+
+  text-align: center;
+
+}
+
+
+
+.landing .intro-text h1 {
+
+  color: #fff;
+
+  font-weight: 800;
+
+  font-size: 50px;
+
+  text-shadow: 5px 5px 5px #111;
+
+  font-family: "Lobster", cursive;
+
+}
+
+/* End Landing Section */
+
+
+
+/* Start Garmmer Cards */
+
+.grammer-home {
+
+  padding-top: var(--section-padding);
+
+  padding-bottom: var(--section-padding);
+
+  margin-top: var(--section-margin);
+
+}
+
+
+
+.grammer-home .grammer-content {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  margin-top: 80px;
+
+  gap: 20px;
+
+}
+
+
+
+.grammer-home .grammer-content .grammer-card {
+
+  position: relative;
+
+  background-color: #f0f0f0;
+
+  padding: 30px 25px 25px;
+
+  border-radius: 10px;
+
+  height: auto;
+
+  text-align: center;
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .grammer-home .grammer-content {
+
+    gap: 80px;
+
+  }
+
+}
+
+
+
+.grammer-home .grammer-content .grammer-card h3 {
+
+  font-size: 24px;
+
+  margin-bottom: 30px;
+
+  color: var(--light-blue-color);
+
+  font-family: "Lobster", cursive;
+
+}
+
+
+
+.grammer-home .grammer-content .grammer-card p {
+
+  color: #777;
+
+  margin-bottom: 20px;
+
+  line-height: 1.4;
+
+  min-height: 110px;
+
+}
+
+
+
+.grammer-home .grammer-content .grammer-card:first-child:before {
+
+  content: "";
+
+  position: absolute;
+
+  height: calc(100% + 50px);
+
+  width: 150px;
+
+  background-image: linear-gradient(to bottom, Var(--dark-red-color), #e60a33);
+
+  transform: skewX(20deg);
+
+  top: -25px;
+
+  right: 30%;
+
+  z-index: -1;
+
+  border-radius: 4px;
+
+  transition: 0.6s;
+
+}
+
+
+
+.grammer-home .grammer-content .grammer-card:first-child:hover:before {
+
+  transform: skewX(-20deg);
+
+  background-image: linear-gradient(to bottom, #e60a33, Var(--dark-red-color));
+
+}
+
+
+
+.grammer-home .grammer-content .grammer-card:nth-child(2)::before {
+
+  content: "";
+
+  position: absolute;
+
+  height: calc(100% + 50px);
+
+  width: 150px;
+
+  background-image: linear-gradient(to bottom,
+
+      var(--dark-purple-color),
+
+      var(--light-purple-color));
+
+  transform: skewX(20deg);
+
+  top: -25px;
+
+  right: 30%;
+
+  z-index: -1;
+
+  border-radius: 4px;
+
+  transition: 0.6s;
+
+}
+
+
+
+.grammer-home .grammer-content .grammer-card:nth-child(2):hover:before {
+
+  transform: skewX(-20deg);
+
+  background-image: linear-gradient(to bottom,
+
+      var(--light-purple-color),
+
+      var(--dark-purple-color));
+
+}
+
+
+
+.grammer-home .grammer-content .grammer-card:last-child:before {
+
+  content: "";
+
+  position: absolute;
+
+  height: calc(100% + 50px);
+
+  width: 150px;
+
+  background-image: linear-gradient(to bottom,
+
+      Var(--dark-blue-color),
+
+      var(--light-blue-color));
+
+  transform: skewX(20deg);
+
+  top: -25px;
+
+  right: 30%;
+
+  z-index: -1;
+
+  border-radius: 4px;
+
+  transition: 0.6s;
+
+}
+
+
+
+.grammer-home .grammer-content .grammer-card:last-child:hover:before {
+
+  transform: skewX(-20deg);
+
+  background-image: linear-gradient(to bottom,
+
+      var(--light-blue-color),
+
+      Var(--dark-blue-color));
+
+}
+
+/* End grammer Cards */
+
+
+
+/* Start Skills Section */
+
+.skills-home {
+
+  padding-top: var(--section-padding);
+
+  padding-bottom: var(--section-padding);
+
+  background-color: var(--section-background);
+
+  margin-top: var(--section-margin);
+
+}
+
+
+
+.skills-home .skills-content {
+
+  margin-top: 80px;
+
+  gap: 20px;
+
+}
+
+
+
+.skills-home .skills-content .card {
+
+  background-color: #f0f0f0;
+
+  padding: 25px;
+
+  border-radius: 10px;
+
+  height: auto;
+
+  text-align: center;
+
+  position: relative;
+
+}
+
+
+
+.skills-home .skills-content .card .text {
+
+  line-height: 1.4;
+
+  margin-top: 40px;
+
+}
+
+
+
+.skills-home .skills-content .card .text .imgBx {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background-color: var(--dark-yellow-color);
+
+  z-index: 1;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  transition: 0.5s;
+
+  border-radius: 10px;
+
+}
+
+
+
+.skills-home .skills-content .card .text .imgBx img {
+
+  width: 50%;
+
+  position: relative;
+
+  transition: 0.5s;
+
+}
+
+
+
+.skills-home .skills-content .card:hover .text .imgBx img {
+
+  transform: translateX(200%);
+
+}
+
+
+
+.skills-home .skills-content .card .text .imgBx::after {
+
+  content: attr(data-text);
+
+  position: absolute;
+
+  top: calc(50% - 20px);
+
+  left: 0;
+
+  width: 100%;
+
+  color: #fff;
+
+  font-size: 25px;
+
+  font-family: "Bangers", cursive;
+
+  text-shadow: 4px 4px 4px #333;
+
+  transform: translateX(-100%);
+
+  transition: 0.5s;
+
+  animation-name: change-word;
+
+  animation-duration: 2s;
+
+  animation-direction: alternate;
+
+  animation-timing-function: linear;
+
+  animation-iteration-count: infinite;
+
+}
+
+
+
+.skills-home .skills-content .card:hover .text .imgBx::after {
+
+  transform: translateX(0);
+
+}
+
+
+
+.skills-home .skills-content .card:hover .text .imgBx {
+
+  color: attr(data-text);
+
+  position: absolute;
+
+  width: 100px;
+
+  height: 100px;
+
+  top: -50px;
+
+  left: calc(50% - 50px);
+
+  border-radius: 10px;
+
+  background-color: Var(--light-blue-color);
+
+  font-size: 24px;
+
+  font-weight: 500;
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .skills-home .skills-content {
+
+    gap: 80px;
+
+  }
+
+
+
+  .skills-home .skills-content .card .text .imgBx {
+
+    color: attr(data-text);
+
+    position: absolute;
+
+    width: 100px;
+
+    height: 100px;
+
+    top: -50px;
+
+    left: calc(50% - 50px);
+
+    border-radius: 10px;
+
+    background-color: Var(--light-blue-color);
+
+    font-size: 24px;
+
+    font-weight: 500;
+
+  }
+
+
+
+  .skills-home .skills-content .card .text .imgBx img {
+
+    width: 50%;
+
+    position: relative;
+
+    animation-name: change-icon;
+
+    animation-duration: 2s;
+
+    animation-direction: alternate;
+
+    animation-timing-function: linear;
+
+    animation-iteration-count: infinite;
+
+    transform: translateX(100%);
+
+  }
+
+
+
+  .skills-home .skills-content .card .text .imgBx::before {
+
+    content: attr(data-text);
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+
+    color: #fff;
+
+    font-size: 25px;
+
+    font-family: "Bangers", cursive;
+
+    text-shadow: 4px 4px 4px #333;
+
+    display: none;
+
+  }
+
+
+
+  .skills-home .skills-content .card .text .imgBx::after {
+
+    content: attr(data-text);
+
+    position: absolute;
+
+    top: calc(50% - 20px);
+
+    left: 0;
+
+    width: 100%;
+
+    color: #fff;
+
+    font-size: 25px;
+
+    font-family: "Bangers", cursive;
+
+    text-shadow: 4px 4px 4px #333;
+
+    transform: translateX(-100%);
+
+    transition: 0.5s;
+
+    transform: translateX(0);
+
+    animation-name: change-word;
+
+    animation-duration: 2s;
+
+    animation-direction: alternate;
+
+    animation-timing-function: linear;
+
+    animation-iteration-count: infinite;
+
+  }
+
+
+
+  .skills-home .skills-content .card .text .imgBx {
+
+    color: attr(data-text);
+
+    position: absolute;
+
+    width: 100px;
+
+    height: 100px;
+
+    top: -50px;
+
+    left: calc(50% - 50px);
+
+    border-radius: 10px;
+
+    background-color: Var(--light-blue-color);
+
+    font-size: 24px;
+
+    font-weight: 500;
+
+  }
+
+
+
+  @keyframes change-icon {
+
+    0% {
+
+      transform: translateX(0%);
+
+    }
+
+    100% {
+
+      transform: translate(200%);
+
+    }
+
+  }
+
+
+
+  @keyframes change-word {
+
+    0% {
+
+      transform: translateX(-100%);
+
+    }
+
+    100% {
+
+      transform: translate(0);
+
+    }
+
+  }
+
+}
+
+
+
+.skills-home .skills-content .card .text h3 {
+
+  font-size: 20px;
+
+  margin-bottom: 10px;
+
+}
+
+.skills-home .skills-content .card .text p {
+
+  color: #777;
+
+  margin-bottom: 20px;
+
+}
+
+/* End Skills Section*/
+
+
+
+/* Start Vocablary */
+
+.vocablary-home {
+
+  padding-top: var(--section-padding);
+
+  padding-bottom: var(--section-padding);
+
+  margin-top: var(--section-margin);
+
+}
+
+
+
+.vocablary-home .container .vocablary-content {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 50px;
+
+}
+
+
+
+.vocablary-home .container .vocablary-content .text {
+
+  width: 600px;
+
+}
+
+
+
+.vocablary-home .container .vocablary-content .text {
+
+  text-align: center;
+
+}
+
+
+
+.vocablary-home .container .vocablary-content .text p {
+
+  margin-bottom: 20px;
+
+}
+
+
+
+.vocablary-home .container .vocablary-content .text hr {
+
+  margin-bottom: 20px;
+
+  border-color: #ce3a95;
+
+}
+
+
+
+.vocablary-home .container .vocablary-content .text a {
+
+  text-decoration: none;
+
+  color: #fff;
+
+  background-color: #ce3a95;
+
+  font-size: 18px;
+
+  padding: 10px;
+
+  border-radius: 10px;
+
+  transition: 0.3s;
+
+}
+
+
+
+.vocablary-home .container .vocablary-content .text a:hover {
+
+  background-color: var(--light-purple-color);
+
+}
+
+
+
+.vocablary-home .container .image {
+
+  position: relative;
+
+}
+
+
+
+.vocablary-home .container .image::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 80px;
+
+  height: calc(100% + 200px);
+
+  background-color: var(--light-purple-color);
+
+  transform: rotate(39deg);
+
+  top: -100px;
+
+  right: 35%;
+
+  z-index: -1;
+
+}
+
+
+
+.vocablary-home .container .image img {
+
+  width: 275px;
+
+}
+
+
+
+/* Small */
+
+
+
+@media (max-width: 768px) {
+
+  .vocablary-home .container .vocablary-content {
+
+    flex-direction: column;
+
+    margin: 40px;
+
+  }
+
+  .vocablary-home .container .image {
+
+    margin: 80px;
+
+  }
+
+  .vocablary-home .container .image img {
+
+    flex-basis: 240px;
+
+  }
+
+  .vocablary-home .container .vocablary-content .text {
+
+    width: 300px;
+
+  }
+
+  .vocablary-home .container .image::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 80px;
+
+    height: calc(100% + 160px);
+
+    background-color: var(--light-purple-color);
+
+    transform: rotate(0);
+
+    top: -100px;
+
+    right: 35%;
+
+    z-index: -1;
+
+  }
+
+  .vocablary-home .container .vocablary-content .text a {
+
+    text-decoration: none;
+
+    color: #fff;
+
+    background-color: var(--dark-purple-color);
+
+    font-size: 14px;
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+  }
+
+}
+
+
+
+/* Medium */
+
+
+
+@media (min-width: 992px) {}
+
+
+
+/* Large */
+
+
+
+@media (min-width: 1200px) {}
+
+
+
+/* End Vocablary */

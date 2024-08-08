@@ -1,0 +1,113 @@
+.test-cont {
+  margin: 0;
+  padding: 0;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.test-cont .quiz-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) inset;
+}
+
+.test-cont h1 {
+  text-align: center;
+  font-family: "Lobster", cursive;
+  letter-spacing: 2px;
+  color: var(--light-blue-color);
+}
+
+.test-cont #questions {
+  margin-bottom: 20px;
+}
+
+.test-cont .question {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px 20px 20px 40px;
+}
+.test-cont .question li {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.test-cont .options {
+  display: flex;
+  flex-direction: column;
+}
+
+.test-cont .options label {
+  padding: 5px 10px 2.5px;
+  cursor: pointer;
+  outline-width: 3px;
+  margin-bottom: 2.5px;
+}
+.test-cont .correct {
+  background-color: #5cd962 !important;
+  color: #333;
+}
+.test-cont .incorrect {
+  background-color: #e34261 !important;
+  color: #333;
+}
+.test-cont .options label:hover {
+  color: var(--light-blue-color);
+  outline-style: dotted;
+  outline-color:  var(--light-blue-color);
+}
+
+.test-cont .options input[type="radio"] {
+  margin-right: 5px;
+}
+.test-cont .options label:has(> input:checked) {
+  display: inline-block;
+  outline: 3px dotted var(--light-blue-color);
+}
+
+.test-cont #result {
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.test-cont button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.test-cont #restartBtn,
+.test-cont #finishBtn {
+  color: white;
+  transition: 0.3s;
+  margin: 0 5px;
+}
+.test-cont #finishBtn {
+  background-color: var(--light-red-color);
+}
+
+.test-cont #finishBtn:hover {
+  background-color: var(--dark-red-color);
+}
+
+.test-cont #restartBtn {
+  background-color: var(--light-blue-color);
+}
+
+.test-cont #restartBtn:hover {
+  background-color: var(--dark-blue-color);
+}
+
+.test-cont .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
