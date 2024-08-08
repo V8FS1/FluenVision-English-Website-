@@ -17,4 +17,4 @@ The primary objective of the project is to ensure the functionality, usability, 
 - **Contact/Email Functionality:** Enables users to reach out for support or inquiries.
 - **Website Logo:** Provides a link back to the homepage.
 
-These features are designed to be tested thoroughly to ensure proper functionality, usability, and security, using tools like Selenium and JMeter for automated and performance testing [Test Report](./documents/test-report.pdf).
+These features are designed to be tested thoroughly to ensure proper functionality, usability, and security, using tools like Selenium and JMeter for automated and performance testing [Test Report](Documents/Test Report.pdf).
